@@ -4,13 +4,13 @@ In our case, the site specialised in manufacturing in Germany. Pivoting on the U
 However, a similar payload is shown [here](https://www.joesandbox.com/analysis/1979283/0/executive#deviceScreen)
 After execution of the initial payload, an obfuscated PowerShell Script is dropped into `C:\ProgramData\Postparenthoodizenesses\yarovizingful.ps1` which fetches commands from a hardcoded C2.
 # Authors
-Evgen Blohm @ InfoGuard AG
-Andreas Klaus @ InfoGuard AG
+- Evgen Blohm @ InfoGuard AG
+- Andreas Klaus @ InfoGuard AG
 
 # Browser Cache Analysis
 As the injection of the external JavaScript Library into the legitimate website is short-lived, a post-mortem analysis of the website might not show the reference to the library anymore. Therefore, we recommend analysing the compromised user's local browser history, where the visited website might be cached and show the state as it was during the visit
 
-![[images/browser_cache.png]]
+![Forensic Artefacts in Browser Cache](images/browser_cache.png)
 
 # yarovizingful.ps1
 This PowerShell Script is obfuscated and runs through a scheduled task every 38 minutes.
